@@ -1,0 +1,3 @@
+export const RECEIVE_USER_DATA = 'RECEIVE_USER_DATA';
+export const LOGOUT_USER = 'LOGOUT_USER';
+export const LOGIN_USER = 'LOGIN_USER';

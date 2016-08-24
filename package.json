@@ -1,0 +1,83 @@
+{
+  "name": "ngForce",
+  "version": "3.0.3",
+  "description": "Angular.js integration library for Salesforce.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node webpack.dev.server"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.1",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "humps": "^1.1.0",
+    "immutable": "^3.8.1",
+    "invariant": "^2.2.1",
+    "jasmine": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "key-mirror": "^1.0.1",
+    "lodash": "^4.14.2",
+    "ng-redux": "^3.4.0-beta.1",
+    "normalizr": "^2.2.1",
+    "raw-loader": "^0.5.1",
+    "react": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-logger": "^2.6.1",
+    "redux-promise": "^0.5.3",
+    "redux-storage": "^4.1.0",
+    "redux-storage-decorator-debounce": "^1.0.1",
+    "redux-storage-decorator-filter": "^1.1.5",
+    "redux-storage-engine-localstorage": "^1.1.1",
+    "redux-thunk": "^2.1.0",
+    "redux-ui-router": "^0.6.0",
+    "serve-favicon": "^2.3.0",
+    "transit-immutable-js": "^0.6.0",
+    "transit-js": "^0.8.846"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noeticpenguin/ngForce.git"
+  },
+  "keywords": [
+    "Salesforce",
+    "Angular",
+    "VisualForce",
+    "Apex"
+  ],
+  "author": "Kevin Poorman, Alex Berg, Luke McFarland, Others",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noeticpenguin/ngForce/issues"
+  },
+  "homepage": "https://github.com/noeticpenguin/ngForce",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "minimist": "^1.2.0",
+    "open": "0.0.5",
+    "postcss-loader": "^0.9.1",
+    "redux-devtools": "^3.3.1",
+    "request": "^2.74.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.2"
+  }
+}

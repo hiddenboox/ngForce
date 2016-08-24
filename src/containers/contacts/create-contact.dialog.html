@@ -1,0 +1,32 @@
+<md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h2>New contact</h2>
+                <md-input-container>
+                    <label>First name</label>
+                    <input data-ng-model="$ctrl.contact.firstName"/>
+                </md-input-container>
+                <md-input-container>
+                    <label>Last name</label>
+                    <input data-ng-model="$ctrl.contact.lastName"/>
+                </md-input-container>
+            </div>
+            <span ng-show="$ctrl.errorMessage" data-ng-bind="$ctrl.errorMessage"></span>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="$ctrl.cancel()">
+                cancel
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="$ctrl.save($ctrl.contact)">
+                <span ng-show="$ctrl.saving === false">save</span>
+                <md-progress-circular
+                    md-mode="indeterminate"
+                    md-diameter="20px"
+                    ng-show="$ctrl.saving === true"
+                ></md-progress-circular>
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -1,0 +1,44 @@
+<md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+        <md-dialog-content>
+            <div class="md-dialog-content" layout="column">
+                <h2>New task</h2>
+                <md-input-container>
+                    <label>Subject</label>
+                    <input data-ng-model="$ctrl.task.subject"/>
+                </md-input-container>
+                <div layout>
+                    <select-user-container
+                        initial-user="$ctrl.initialUser"
+                        on-select-user="$ctrl.selectUser(user)"
+                    ></select-user-container>
+                    <md-datepicker data-ng-model="$ctrl.task.activityDate" md-placeholder="Due date"></md-datepicker>
+                </div>
+                <md-input-container>
+                    <label>Description</label>
+                    <textarea
+                            ng-model="$ctrl.task.description"
+                            md-maxlength="150"
+                            rows="2"
+                            md-select-on-focus
+                    ></textarea>
+                </md-input-container>
+            </div>
+            <span style="color: red" ng-show="$ctrl.errorMessage" data-ng-bind="$ctrl.errorMessage"></span>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="$ctrl.cancel()">
+                cancel
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="$ctrl.save($ctrl.task)">
+                <span ng-show="$ctrl.saving === false">save</span>
+                <md-progress-circular
+                    md-mode="indeterminate"
+                    md-diameter="20px"
+                    ng-show="$ctrl.saving === true"
+                ></md-progress-circular>
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

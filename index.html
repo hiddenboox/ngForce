@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <title>ngForce</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        #shell {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <storage>
+        <authorize>
+            <app ng-if="$authorize.user.logged" layout="column" layout-fill></app>
+            <welcome ng-if="!$authorize.user.logged"></welcome>
+        </authorize>
+        <notifier/>
+    </storage>
+    <script src="build/bundle.js"></script>
+</body>
+</html>
